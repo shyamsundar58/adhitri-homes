@@ -20,7 +20,6 @@ export default function Hero() {
         return () => clearInterval(interval);
     }, []);
 
-
     const scrollToProjects = () => {
         document
             .getElementById("projects")
@@ -28,7 +27,6 @@ export default function Hero() {
                 behavior: "smooth",
             });
     };
-
 
     const scrollToContact = () => {
         document
@@ -38,71 +36,39 @@ export default function Hero() {
             });
     };
 
-
     return (
         <section
             id="home"
-            className="
-        relative
-        min-h-screen
-        flex
-        items-center
-        justify-center
-        overflow-hidden
-      "
+            className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-black"
         >
-
             {/* Background Image Slider */}
             <AnimatePresence mode="wait">
-
                 <motion.div
                     key={currentImage}
-                    className="
-            absolute
-            inset-0
-            bg-cover
-            bg-center
-            pointer-events-none
-          "
-
+                    className="absolute inset-0 bg-cover bg-center pointer-events-none"
                     style={{
                         backgroundImage: `url(${heroImages[currentImage]})`,
                     }}
-
                     initial={{
                         opacity: 0,
                         scale: 1,
                     }}
-
                     animate={{
                         opacity: 1,
                         scale: 1.08,
                     }}
-
                     exit={{
                         opacity: 0,
                     }}
-
                     transition={{
                         duration: 0.8,
                         ease: "easeInOut",
                     }}
-
                 />
-
             </AnimatePresence>
 
-
             {/* Dark Overlay */}
-            <div
-                className="
-          absolute
-          inset-0
-          bg-black/60
-          pointer-events-none
-        "
-            />
-
+            <div className="absolute inset-0 bg-black/60 pointer-events-none" />
 
             {/* Hero Content */}
             <motion.div
@@ -110,160 +76,60 @@ export default function Hero() {
                     opacity: 0,
                     y: 40,
                 }}
-
                 animate={{
                     opacity: 1,
                     y: 0,
                 }}
-
                 transition={{
                     duration: 1,
                 }}
-
-                className="
-          relative
-          z-20
-          text-center
-          px-6
-          max-w-5xl
-        "
+                className="relative z-20 text-center px-4 sm:px-6 w-full max-w-5xl mx-auto flex flex-col items-center justify-center h-full pt-16 md:pt-20"
             >
-
-                <p
-                    className="
-            text-gold
-            uppercase
-            tracking-[6px]
-            text-sm
-            mb-6
-          "
-                >
+                <p className="text-gold uppercase tracking-[4px] sm:tracking-[6px] text-xs sm:text-sm font-medium mb-3 sm:mb-6">
                     Premium Construction & Architecture
                 </p>
 
-
-                <h1
-                    className="
-            text-white
-            text-5xl
-            md:text-7xl
-            font-serif
-            leading-tight
-          "
-                >
+                <h1 className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-serif leading-tight max-w-4xl">
                     Building Spaces
                     <br />
                     That Inspire Living
                 </h1>
 
-
-                <p
-                    className="
-            text-gray-300
-            mt-8
-            text-lg
-            max-w-2xl
-            mx-auto
-          "
-                >
-                    We design and construct exceptional residential
-                    and commercial spaces with timeless architecture
-                    and superior craftsmanship.
+                <p className="text-gray-300 mt-4 sm:mt-8 text-sm sm:text-base md:text-lg max-w-[320px] sm:max-w-2xl mx-auto line-clamp-3 sm:line-clamp-none">
+                    We design and construct exceptional residential and commercial spaces with timeless architecture and superior craftsmanship.
                 </p>
 
-
                 {/* Buttons */}
-                <div
-                    className="
-            mt-10
-            flex
-            justify-center
-            gap-6
-            flex-wrap
-          "
-                >
-
+                <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0">
                     <button
                         onClick={scrollToProjects}
-                        className="
-              px-10
-              py-4
-              bg-gold
-              text-black
-              uppercase
-              tracking-[3px]
-              text-sm
-              font-medium
-              hover:bg-white
-              transition-all
-              duration-300
-            "
+                        className="w-full sm:w-auto px-8 sm:px-10 h-[52px] sm:h-auto sm:py-4 bg-gold text-black uppercase tracking-[3px] text-xs sm:text-sm font-medium hover:bg-white transition-all duration-300"
                     >
                         Explore Projects
                     </button>
 
-
                     <button
                         onClick={scrollToContact}
-                        className="
-              px-10
-              py-4
-              border
-              border-white
-              text-white
-              uppercase
-              tracking-[3px]
-              text-sm
-              hover:bg-white
-              hover:text-black
-              transition-all
-              duration-300
-            "
+                        className="w-full sm:w-auto px-8 sm:px-10 h-[52px] sm:h-auto sm:py-4 border border-white text-white uppercase tracking-[3px] text-xs sm:text-sm hover:bg-white hover:text-black transition-all duration-300"
                     >
                         Book A Visit
                     </button>
-
                 </div>
-
             </motion.div>
 
-
             {/* Slider Indicators */}
-            <div
-                className="
-          absolute
-          bottom-12
-          left-1/2
-          -translate-x-1/2
-          flex
-          gap-3
-          z-30
-        "
-            >
-
+            <div className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex gap-3 z-30">
                 {heroImages.map((_, index) => (
-
                     <button
                         key={index}
                         onClick={() => setCurrentImage(index)}
-
-                        className={`
-              h-[3px]
-              transition-all
-              duration-500
-
-              ${currentImage === index
-                                ? "w-12 bg-gold"
-                                : "w-6 bg-white/50"
-                            }
-            `}
+                        className={`h-[3px] transition-all duration-500 ${
+                            currentImage === index ? "w-12 bg-gold" : "w-6 bg-white/50"
+                        }`}
+                        aria-label={`Go to slide ${index + 1}`}
                     />
-
                 ))}
-
             </div>
-
-
         </section>
     );
-}
+}

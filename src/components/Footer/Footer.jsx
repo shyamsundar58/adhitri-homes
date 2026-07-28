@@ -114,7 +114,7 @@ export default function Footer() {
                                 <Phone className="text-gold mt-1" size={18} />
 
                                 <p className="text-gray-400">
-                                    +91 98765 43210
+                                    +91 9443764949
                                 </p>
 
                             </div>
@@ -124,7 +124,7 @@ export default function Footer() {
                                 <Mail className="text-gold mt-1" size={18} />
 
                                 <p className="text-gray-400">
-                                    info@aurelia.com
+                                    adhitrihomes@gmail.com
                                 </p>
 
                             </div>
