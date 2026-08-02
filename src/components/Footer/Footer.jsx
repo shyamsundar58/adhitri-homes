@@ -154,7 +154,7 @@ export default function Footer() {
                 <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
 
                     <p className="text-gray-500 text-sm">
-                        © {new Date().getFullYear()} Aurelia Constructions. All Rights Reserved.
+                        © {new Date().getFullYear()} Adhitri Homes PVT LTD. All Rights Reserved.
                     </p>
 
                     <div className="flex gap-8 text-sm text-gray-500">
