@@ -13,32 +13,75 @@ export default function NavLinks() {
     const [activeSection, setActiveSection] = useState("home");
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            {
-                threshold: 0.5, // section is active when 50% visible
-            }
-        );
+        const handleScroll = () => {
+            const headerOffset = 120;
 
-        links.forEach((item) => {
-            const section = document.getElementById(item.id);
-            if (section) observer.observe(section);
+            let currentSection = "home";
+            let closestDistance = Infinity;
+
+            links.forEach((item) => {
+                const section = document.getElementById(item.id);
+
+                if (!section) return;
+
+                const rect = section.getBoundingClientRect();
+
+                // Section has reached the navbar area
+                if (
+                    rect.top <= headerOffset &&
+                    rect.bottom > headerOffset
+                ) {
+                    const distance = Math.abs(rect.top - headerOffset);
+
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        currentSection = item.id;
+                    }
+                }
+            });
+
+            // When we're at the very top
+            if (window.scrollY < 100) {
+                currentSection = "home";
+            }
+
+            setActiveSection(currentSection);
+        };
+
+        // Run once when page loads
+        handleScroll();
+
+        window.addEventListener("scroll", handleScroll, {
+            passive: true,
         });
 
-        return () => observer.disconnect();
+        window.addEventListener("resize", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleScroll);
+        };
     }, []);
 
     const scrollToSection = (id) => {
-        document.getElementById(id)?.scrollIntoView({
+        const section = document.getElementById(id);
+
+        if (!section) return;
+
+        const headerOffset = 100;
+
+        const sectionPosition =
+            section.getBoundingClientRect().top +
+            window.scrollY -
+            headerOffset;
+
+        window.scrollTo({
+            top: sectionPosition,
             behavior: "smooth",
-            block: "start",
         });
+
+        // Immediately highlight the clicked section
+        setActiveSection(id);
     };
 
     return (
@@ -47,25 +90,55 @@ export default function NavLinks() {
                 <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className={`group relative uppercase text-sm tracking-[3px] font-medium transition-colors duration-300 cursor-pointer ${activeSection === item.id
-                        ? "text-gold"
-                        : "text-white"
-                        }`}
+                    className={`
+                        group
+                        relative
+                        uppercase
+                        text-sm
+                        tracking-[3px]
+                        font-medium
+                        transition-colors
+                        duration-300
+                        cursor-pointer
+
+                        ${
+                            activeSection === item.id
+                                ? "text-gold"
+                                : "text-white"
+                        }
+                    `}
                 >
                     <span
-                        className={`transition-colors duration-300 ${activeSection === item.id
-                            ? "text-gold"
-                            : "group-hover:text-gold"
-                            }`}
+                        className={`
+                            transition-colors
+                            duration-300
+
+                            ${
+                                activeSection === item.id
+                                    ? "text-gold"
+                                    : "group-hover:text-gold"
+                            }
+                        `}
                     >
                         {item.name}
                     </span>
 
                     <span
-                        className={`absolute left-0 -bottom-2 h-[2px] bg-gold transition-all duration-300 ${activeSection === item.id
-                            ? "w-full"
-                            : "w-0 group-hover:w-full"
-                            }`}
+                        className={`
+                            absolute
+                            left-0
+                            -bottom-2
+                            h-[2px]
+                            bg-gold
+                            transition-all
+                            duration-300
+
+                            ${
+                                activeSection === item.id
+                                    ? "w-full"
+                                    : "w-0 group-hover:w-full"
+                            }
+                        `}
                     />
                 </button>
             ))}
