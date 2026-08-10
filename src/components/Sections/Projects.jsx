@@ -14,18 +14,18 @@ import apartment6 from "../../assets/apartments/apt6.jpg";
 
 import plot1 from "../../assets/plots/plot1.jpg";
 import plot2 from "../../assets/plots/plot2.jpg";
-// import plot3 from "../../assets/plots/plot3.jpg";
-// import plot4 from "../../assets/plots/plot4.jpg";
-// import plot5 from "../../assets/plots/plot5.jpg";
+import plot3 from "../../assets/plots/plot3.jpg";
+import plot4 from "../../assets/plots/plot4.jpg";
+import plot5 from "../../assets/plots/plot5.jpg";
 // import plot6 from "../../assets/plots/plot6.jpg";
 
 
 // ================= CATEGORIES =================
 
 const categories = [
-    "Apartments",
+    "Complex",
     "Plots",
-    "Construction",
+    // "Construction",
 ];
 
 
@@ -33,7 +33,7 @@ const categories = [
 
 const properties = {
 
-    Apartments: {
+    Complex: {
         images: [
             apartment1,
             apartment2,
@@ -43,14 +43,14 @@ const properties = {
             apartment6,
         ],
 
-        label: "Apartments",
+        label: "Complex",
 
         featuredLabel: "Featured Apartment",
 
-        title: "Premium Apartments",
+        title: "Premium Complex",
 
         description:
-            "Discover thoughtfully designed premium apartments in Chennai's most sought-after residential locations with modern amenities, excellent connectivity and quality construction.",
+            "Discover thoughtfully designed premium Complex in Chennai's most sought-after residential locations with modern amenities, excellent connectivity and quality construction.",
 
         highlights: [
             {
@@ -95,9 +95,9 @@ const properties = {
         images: [
             plot1,
             plot2,
-            // plot3,
-            // plot4,
-            // plot5,
+            plot3,
+            plot4,
+            plot5,
             // plot6,
         ],
 
@@ -192,7 +192,7 @@ const properties = {
 export default function Projects() {
 
     const [activeCategory, setActiveCategory] =
-        useState("Apartments");
+        useState("Complex");
 
     const [currentImage, setCurrentImage] =
         useState(0);
@@ -326,7 +326,7 @@ export default function Projects() {
                         text-lg
                         leading-8
                     ">
-                        Explore premium apartments, residential plots
+                        Explore premium Complex, residential plots
                         and construction services crafted with quality,
                         comfort and thoughtful design.
                     </p>
@@ -888,7 +888,7 @@ export default function Projects() {
                             </button>
 
 
-                            <button
+                            {/* <button
                                 className="
                                     px-8
                                     py-4
@@ -903,7 +903,7 @@ export default function Projects() {
                                 "
                             >
                                 View Details
-                            </button>
+                            </button> */}
 
                         </div>
 
