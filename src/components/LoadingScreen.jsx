@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logo from "../assets/logos/AhLogo.jpeg"
+import logo from "../assets/logos/AhLogo.webp"
 
 export default function LoadingScreen() {
     return (

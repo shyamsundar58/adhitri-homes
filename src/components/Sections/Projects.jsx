@@ -3,21 +3,24 @@ import { motion } from "framer-motion";
 
 // ================= APARTMENT IMAGES =================
 
-import apartment1 from "../../assets/apartments/apt1.jpg";
-import apartment2 from "../../assets/apartments/apt2.jpg";
-import apartment3 from "../../assets/apartments/apt3.jpg";
-import apartment4 from "../../assets/apartments/apt4.jpg";
-import apartment5 from "../../assets/apartments/apt5.jpg";
-import apartment6 from "../../assets/apartments/apt6.jpg";
+import apartment1 from "../../assets/apartments/apt1.WebP";
+import apartment2 from "../../assets/apartments/apt2.WebP";
+import apartment3 from "../../assets/apartments/apt3.WebP";
+import apartment4 from "../../assets/apartments/apt4.WebP";
+import apartment5 from "../../assets/apartments/apt5.WebP";
+import apartment6 from "../../assets/apartments/apt6.WebP";
+import apartment7 from "../../assets/apartments/apt7.WebP";
+import apartment8 from "../../assets/apartments/apt8.WebP";
 
 // ================= PLOT IMAGES =================
 
-import plot1 from "../../assets/plots/plot1.jpg";
-import plot2 from "../../assets/plots/plot2.jpg";
-import plot3 from "../../assets/plots/plot3.jpg";
-import plot4 from "../../assets/plots/plot4.jpg";
-import plot5 from "../../assets/plots/plot5.jpg";
-// import plot6 from "../../assets/plots/plot6.jpg";
+import plot1 from "../../assets/plots/plot1.WebP";
+import plot2 from "../../assets/plots/plot2.WebP";
+import plot3 from "../../assets/plots/plot3.WebP";
+import plot4 from "../../assets/plots/plot4.WebP";
+import plot5 from "../../assets/plots/plot5.WebP";
+import plot6 from "../../assets/plots/plot6.WebP";
+import plot7 from "../../assets/plots/plot7.WebP";
 
 
 // ================= CATEGORIES =================
@@ -41,6 +44,9 @@ const properties = {
             apartment4,
             apartment5,
             apartment6,
+            apartment7,
+            apartment8,
+
         ],
 
         label: "Complex",
@@ -98,7 +104,8 @@ const properties = {
             plot3,
             plot4,
             plot5,
-            // plot6,
+            plot6,
+            plot7
         ],
 
         label: "Residential Plots",

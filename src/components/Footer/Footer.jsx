@@ -10,7 +10,7 @@ import {
     Mail,
     MapPin,
 } from "lucide-react";
-import logo from "../../assets/logos/AhLogo.jpeg";
+import logo from "../../assets/logos/AhLogo.webp";
 const quickLinks = [
     { name: "Home", id: "home" },
     { name: "About", id: "about" },

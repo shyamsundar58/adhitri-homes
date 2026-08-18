@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ayapakkamLayout from "../../assets/hero/hero1.WebP";
+import prTowers from "../../assets/hero/hero1.WebP";
+import luxuryVilla from "../../assets/hero/hero1.WebP";
 
 const heroImages = [
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+    ayapakkamLayout,
+    prTowers,
+    luxuryVilla,
 ];
+
 
 export default function Hero() {
     const [currentImage, setCurrentImage] = useState(0);
@@ -21,19 +25,15 @@ export default function Hero() {
     }, []);
 
     const scrollToProjects = () => {
-        document
-            .getElementById("projects")
-            ?.scrollIntoView({
-                behavior: "smooth",
-            });
+        document.getElementById("projects")?.scrollIntoView({
+            behavior: "smooth",
+        });
     };
 
     const scrollToContact = () => {
-        document
-            .getElementById("contact")
-            ?.scrollIntoView({
-                behavior: "smooth",
-            });
+        document.getElementById("contact")?.scrollIntoView({
+            behavior: "smooth",
+        });
     };
 
     return (
@@ -96,7 +96,9 @@ export default function Hero() {
                 </h1>
 
                 <p className="text-gray-300 mt-4 sm:mt-8 text-sm sm:text-base md:text-lg max-w-[320px] sm:max-w-2xl mx-auto line-clamp-3 sm:line-clamp-none">
-                    We design and construct exceptional residential and commercial spaces with timeless architecture and superior craftsmanship.
+                    We design and construct exceptional residential and
+                    commercial spaces with timeless architecture and superior
+                    craftsmanship.
                 </p>
 
                 {/* Buttons */}
@@ -124,7 +126,9 @@ export default function Hero() {
                         key={index}
                         onClick={() => setCurrentImage(index)}
                         className={`h-[3px] transition-all duration-500 ${
-                            currentImage === index ? "w-12 bg-gold" : "w-6 bg-white/50"
+                            currentImage === index
+                                ? "w-12 bg-gold"
+                                : "w-6 bg-white/50"
                         }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />
@@ -132,4 +136,4 @@ export default function Hero() {
             </div>
         </section>
     );
-}
+}

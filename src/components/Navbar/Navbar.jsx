@@ -1,7 +1,7 @@
 ﻿import { useEffect, useState } from "react";
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
-import logo from "../../assets/logos/AhLogo.jpeg";
+import logo from "../../assets/logos/AhLogo.webp";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
