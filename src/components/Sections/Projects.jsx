@@ -3,24 +3,24 @@ import { motion } from "framer-motion";
 
 // ================= APARTMENT IMAGES =================
 
-import apartment1 from "../../assets/apartments/apt1.WebP";
-import apartment2 from "../../assets/apartments/apt2.WebP";
-import apartment3 from "../../assets/apartments/apt3.WebP";
-import apartment4 from "../../assets/apartments/apt4.WebP";
-import apartment5 from "../../assets/apartments/apt5.WebP";
-import apartment6 from "../../assets/apartments/apt6.WebP";
-import apartment7 from "../../assets/apartments/apt7.WebP";
-import apartment8 from "../../assets/apartments/apt8.WebP";
+import apartment1 from "../../assets/apartments/apt1.webp";
+import apartment2 from "../../assets/apartments/apt2.webp";
+import apartment3 from "../../assets/apartments/apt3.webp";
+import apartment4 from "../../assets/apartments/apt4.webp";
+import apartment5 from "../../assets/apartments/apt5.webp";
+import apartment6 from "../../assets/apartments/apt6.webp";
+import apartment7 from "../../assets/apartments/apt7.webp";
+import apartment8 from "../../assets/apartments/apt8.webp";
 
 // ================= PLOT IMAGES =================
 
-import plot1 from "../../assets/plots/plot1.WebP";
-import plot2 from "../../assets/plots/plot2.WebP";
-import plot3 from "../../assets/plots/plot3.WebP";
-import plot4 from "../../assets/plots/plot4.WebP";
-import plot5 from "../../assets/plots/plot5.WebP";
-import plot6 from "../../assets/plots/plot6.WebP";
-import plot7 from "../../assets/plots/plot7.WebP";
+import plot1 from "../../assets/plots/plot1.webp";
+import plot2 from "../../assets/plots/plot2.webp";
+import plot3 from "../../assets/plots/plot3.webp";
+import plot4 from "../../assets/plots/plot4.webp";
+import plot5 from "../../assets/plots/plot5.webp";
+import plot6 from "../../assets/plots/plot6.webp";
+import plot7 from "../../assets/plots/plot7.webp";
 
 
 // ================= CATEGORIES =================

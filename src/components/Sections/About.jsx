@@ -1,7 +1,7 @@
 ﻿import { motion } from "framer-motion";
 
 // About Image
-import aboutImage from "../../assets/about/about1.WebP";
+import aboutImage from "../../assets/about/about1.webp";
 
 const stats = [
     {

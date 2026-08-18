@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ayapakkamLayout from "../../assets/hero/hero1.WebP";
-import prTowers from "../../assets/hero/hero1.WebP";
-import luxuryVilla from "../../assets/hero/hero1.WebP";
+import ayapakkamLayout from "../../assets/hero/hero1.webp";
+import prTowers from "../../assets/hero/hero1.webp";
+import luxuryVilla from "../../assets/hero/hero1.webp";
 
 const heroImages = [
     ayapakkamLayout,
